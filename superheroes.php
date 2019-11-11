@@ -63,10 +63,25 @@ $superheroes = [
   ], 
 ];
 
-?>
+$hero = $_REQUEST["hero"];
+$chk=0;
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+if ($hero !==""){
+	foreach($superheroes as $superhero){
+		if (strcasecmp($superhero['alias'], $hero)==0 || strcasecmp($superhero['name'], $hero)==0){
+			echo "<h3>". $superhero['alias'] . "</h3>" . "<h4> A.K.A " . $superhero['name'] . "</h4>" . "<p>" . $superhero['biography']. "</p>";
+			$chk=1; 
+		}
+	}
+	if ($chk==0){
+		echo '<div><br>That superhero is not in the database<br><br> Please ensure you enter english characters or submit a blank search to see the list</div>';
+	} 
+}else{ 
+	?>
+	<ul>
+	<?php foreach ($superheroes as $superhero): ?>
+	  <li><?= $superhero['alias']; ?></li>
+	<?php endforeach; ?>
+	</ul> <?php
+}
+?>
