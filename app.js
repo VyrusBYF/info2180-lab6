@@ -11,8 +11,10 @@ window.onload = function (){
 			if (httpRequest.readyState === XMLHttpRequest.DONE) {
 			 	if (httpRequest.status === 200) {
 			 		var response = httpRequest.responseText;
-		 			document.getElementById("Banner").innerHTML="Results";
 		 			document.getElementById("result").innerHTML=response;
+		 			document.getElementById("Banner").innerHTML="Results";
+		 			document.getElementById("Banner").setAttribute("class","banner").innerHTML="Results";
+
 			 	} else {
 			 		alert('There was a problem with the request.');
 			 	}
