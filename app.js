@@ -11,12 +11,13 @@ window.onload = function (){
 			if (httpRequest.readyState === XMLHttpRequest.DONE) {
 			 	if (httpRequest.status === 200) {
 			 		var response = httpRequest.responseText;
-			 		document.getElementsByTagName("head").innerHTML="Heroes Found";
-			 		document.getElementById("Result").innerHTML=response;
+		 			document.getElementById("Banner").innerHTML="Results";
+		 			document.getElementById("result").innerHTML=response;
 			 	} else {
 			 		alert('There was a problem with the request.');
 			 	}
 			}
+			myHeroes.preventDefault();
 		};
 		httpRequest.open('GET', url+"?hero="+hero);
 		httpRequest.send();

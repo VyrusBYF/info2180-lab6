@@ -1,0 +1,90 @@
+body {
+    background-image: linear-gradient(to right , #dfe6e9 , #74b9ff);
+}
+
+.banner {
+    font-size: 40px;
+    font-family: "Impact";
+    font-style: italic;
+    justify-content: center;
+    display:flex;
+    padding: 25px;
+    border-bottom: 1px solid black;
+    width:1100px;
+    margin:auto;
+}
+
+.noresults{
+    color: red;
+    font-size: 40px;
+    padding: 30px;
+}
+
+.results {
+    color: #636e72;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    justify-content: center;
+    display:flex;
+}
+.searchBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-family: "Impact";
+
+}
+
+@media screen and (max-width: 620px) {
+    .searchBox:hover > .searchInput {
+        width: 150px;
+        padding: 0 6px;
+    }
+}
+
+button:focus, button:active:focus, button.active:focus {
+    outline: none !important;
+    outline-style: none !important;
+}

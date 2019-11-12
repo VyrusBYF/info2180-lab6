@@ -69,12 +69,12 @@ $chk=0;
 if ($hero !==""){
 	foreach($superheroes as $superhero){
 		if (strcasecmp($superhero['alias'], $hero)==0 || strcasecmp($superhero['name'], $hero)==0){
-			echo "<h3>". $superhero['alias'] . "</h3>" . "<h4> A.K.A " . $superhero['name'] . "</h4>" . "<p>" . $superhero['biography']. "</p>";
+			echo "<div><br><br>" . "<h3>". $superhero['alias'] . "</h3>" . "<h4> A.K.A " . $superhero['name'] . "</h4>" . "<p>" . $superhero['biography']. "</p>" . "</div>";
 			$chk=1; 
 		}
 	}
 	if ($chk==0){
-		echo '<div><br>That superhero is not in the database<br><br> Please ensure you enter english characters or submit a blank search to see the list</div>';
+		echo '<div class="noresults"><br>Superhero Not Found</div>';
 	} 
 }else{ 
 	?>
